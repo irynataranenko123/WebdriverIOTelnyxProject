@@ -17,6 +17,7 @@
         "wdio-chromedriver-service": "^8.0.1"
     },
     "scripts": {
+        "wdio": "npx wdio run wdio.chrome.conf.js && npx wdio run wdio.firefox.conf.js",
         "wdio:chrome": "wdio run wdio.chrome.conf.js",
         "wdio:firefox": "wdio run wdio.firefox.conf.js",
         "allure:generate": "npx allure generate ./allure-results --clean",
