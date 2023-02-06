@@ -5,7 +5,7 @@ module.exports = class MainPage {
     get signUpBtn () {return $('.sc-14c941d7-5.sc-14c941d7-7 .sc-5d3a275a-0 .sc-5d3a275a-1')};
     get talkToExpertBtn () {return $('[href="/contact-us"]')}
     
-    open () {
+    async open () {
         return browser.url('https://telnyx.com/')
     }
     async acceptCookies() {
@@ -18,7 +18,7 @@ module.exports = class MainPage {
         this.loginBtn.click()
         setTimeout(async function () {
             await browser.toHaveUrlContaining('/login')
-          }, 5000);
+        }, 5000);
         await expect(browser).toHaveUrlContaining('/login')
     }
     async goToSignUpPage() {
