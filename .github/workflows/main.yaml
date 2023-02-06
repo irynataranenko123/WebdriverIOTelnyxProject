@@ -26,9 +26,7 @@ jobs:
     - run: npm ci
     - run: npm install 
     - run: npm run build --if-present
-    - uses: browser-actions/setup-chrome@v1
-    - run: chrome --version
-    - run: npm run wdio:chrome --disable-dev-shm-usage
+    - run: npm run wdio:chrome 
     - run: |
         rm -R docs
         mkdir docs
