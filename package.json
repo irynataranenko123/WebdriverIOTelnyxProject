@@ -13,12 +13,12 @@
         "@wdio/mocha-framework": "^8.3.0",
         "@wdio/selenium-standalone-service": "^8.3.2",
         "@wdio/spec-reporter": "^8.3.0",
-        "chromedriver": "^109.0.0",
+        "chromedriver": "^109.0.5414.74",
         "wdio-chromedriver-service": "^8.0.1"
     },
     "scripts": {
-        "wdio": "npx wdio run wdio.chrome.conf.js && npx wdio run wdio.firefox.conf.js",
-        "wdio:chrome": "wdio run wdio.chrome.conf.js",
+        "wdio": "npm run wdio:chrome && npm run wdio:firefox",
+        "wdio:chrome": "wdio run wdio.chrome.conf.js --headless",
         "wdio:firefox": "wdio run wdio.firefox.conf.js",
         "allure:generate": "npx allure generate ./allure-results --clean",
         "allure:open": "npx allure open ./allure-report",
