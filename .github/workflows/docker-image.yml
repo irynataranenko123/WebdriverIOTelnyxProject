@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: npm run docker:build
     - name: Run the Docker image
-      run: npm run docker:run
+      run: docker run testwdio
