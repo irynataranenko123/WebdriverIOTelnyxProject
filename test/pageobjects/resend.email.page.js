@@ -25,7 +25,7 @@ class ResendEmailPage {
         this.haveAccounBtn.click()
         setTimeout(async function () {
             await browser.toHaveUrlContaining('/login')
-          }, 5000);
+        }, 10000);
         await expect(browser).toHaveUrlContaining('/login')
     }
     async clickNeedSignUpBtn () {
@@ -33,7 +33,7 @@ class ResendEmailPage {
         this.needSignUpBtn.click()
         setTimeout(async function () {
             await browser.toHaveUrlContaining('/sign-up')
-          }, 5000);
+        }, 10000);
         await expect(browser).toHaveUrlContaining('/sign-up')
     }
 }

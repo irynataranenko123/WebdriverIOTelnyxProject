@@ -15,9 +15,9 @@ describe('telnyx', async function () {
         await resendEmailPage.checkMessage(data.successResendEmail)
     })
     it('A6 - Checking the ability to do to the Sign Up page from the Resend Email page', async function () {
-        await resendEmailPage.clickHaveAccountBtn() 
+        await resendEmailPage.clickNeedSignUpBtn()
     })
     it('A7 - Checking the ability to do to the Login page from the Resend Email page', async function () {
-        await resendEmailPage.clickNeedSignUpBtn() 
+        await resendEmailPage.clickHaveAccountBtn()
     })
 })
