@@ -11,7 +11,7 @@ class PasswordRecoveryPage{
         await expect(this.inputEmail).toHaveValue(email)
     }
     async clickResetPAsswordBtn(){
-        await this.loginBtn.waitForEnabled({ timeout: 7000 })
+        await this.resetPasswordBtn.waitForEnabled({ timeout: 7000 })
         this.resetPasswordBtn.click()
         await expect(this.loginBtn).toBeDisplayed()
     }
