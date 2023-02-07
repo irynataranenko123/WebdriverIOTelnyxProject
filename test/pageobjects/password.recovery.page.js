@@ -12,7 +12,7 @@ class PasswordRecoveryPage{
     }
     async clickResetPAsswordBtn(){
         await this.resetPasswordBtn.waitForEnabled({ timeout: 7000 })
-        this.resetPasswordBtn.click()
+        await this.resetPasswordBtn.click()
         await expect(this.loginBtn).toBeDisplayed()
     }
     async clickLoginBtn () {
