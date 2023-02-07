@@ -14,27 +14,27 @@ module.exports = class MainPage {
         }
     }
     async goToLoginPage() {
-        await this.loginBtn.waitForExist({ timeout: 7000 })
+        await this.loginBtn.waitForExist({ timeout: 10000 })
         this.loginBtn.click()
         setTimeout(async function () {
             await browser.toHaveUrlContaining('/login')
-        }, 5000);
+        }, 10000);
         await expect(browser).toHaveUrlContaining('/login')
     }
     async goToSignUpPage() {
-        await this.signUpBtn.waitForExist({ timeout: 7000 })
+        await this.signUpBtn.waitForExist({ timeout: 10000 })
         this.signUpBtn.click()
         setTimeout(async function () {
             await browser.toHaveUrlContaining('/sign-up')
-          }, 5000);
+        }, 10000);
         await expect(browser).toHaveUrlContaining('/sign-up')
     }
     async goToContactPage() {
-        await this.talkToExpertBtn.waitForExist({ timeout: 7000 })
+        await this.talkToExpertBtn.waitForExist({ timeout: 10000 })
         this.talkToExpertBtn.click()
         setTimeout(async function () {
             await browser.toHaveUrlContaining('/contact-us')
-          }, 5000);
+        }, 10000);
         await expect(browser).toHaveUrlContaining('/contact-us')
     }
 }

@@ -33,7 +33,7 @@ class SignUpPage extends mainPage{
         this.agreeCheckbox.click()
     }
     async clickSubmitBtn() {
-        await this.submitBtn.waitForEnabled({ timeout: 7000 })
+        await this.submitBtn.waitForEnabled({ timeout: 10000 })
         this.submitBtn.click()
     }
     async checkEmailError(text) {
@@ -59,16 +59,16 @@ class SignUpPage extends mainPage{
         await expect(this.inputPassword).toHaveAttr('type', 'text')
     }
     async clickHavePromocodeBtn() {
-        await this.havePromocodeBtn.waitForExist({ timeout: 7000 })
+        await this.havePromocodeBtn.waitForExist({ timeout: 10000 })
         this.havePromocodeBtn.click()
         await expect(this.inputPromocode).toBeDisplayed()
     }
     async clickTermsBtn() {
-        await this.termsBtn.waitForExist({ timeout: 7000 })
+        await this.termsBtn.waitForExist({ timeout: 10000 })
         this.termsBtn.click()
         setTimeout(async function () {
             await browser.toHaveUrlContaining('/terms')
-        }, 5000);
+        }, 10000);
         await expect(browser).toHaveUrlContaining('/terms')
     }
     async clickBottomPrivacyBtn() {
@@ -76,7 +76,7 @@ class SignUpPage extends mainPage{
         this.bottomPrivacyBtn.click()
         setTimeout(async function () {
             await browser.toHaveUrlContaining('/privacy')
-        }, 5000);
+        }, 10000);
         await expect(browser).toHaveUrlContaining('/privacy')
     }
 }

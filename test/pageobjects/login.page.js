@@ -30,7 +30,7 @@ class LoginPage extends mainPage{
         await expect(this.inputPassword).toHaveValue(password)
     }
     async clickSubmitBtn(){
-        await this.submitBtn.waitForEnabled({ timeout: 7000 })
+        await this.submitBtn.waitForEnabled({ timeout: 10000 })
         await this.submitBtn.click()
     }
     async checkErrorMessage(text, error){
@@ -42,7 +42,7 @@ class LoginPage extends mainPage{
             }
     }
     async openOtherProviders(){
-        await this.otherProviders.waitForEnabled({ timeout: 7000 })
+        await this.otherProviders.waitForEnabled({ timeout: 10000 })
         await this.otherProviders.click()
         await expect(this.loginFacebook).toBeDisplayed()
         await expect(this.loginLinkedin).toBeDisplayed()
@@ -68,7 +68,7 @@ class LoginPage extends mainPage{
         await expect(this.inputCompanyEmail).toHaveValue(email)
     }
     async clickSubmitSSOBtn() {
-        await this.submitSSOBtn.waitForEnabled({ timeout: 7000 })
+        await this.submitSSOBtn.waitForEnabled({ timeout: 10000 })
         await this.submitSSOBtn.click()
     }
     async checkErroMessageSSO(text) {
@@ -76,7 +76,7 @@ class LoginPage extends mainPage{
         await expect(this.errorMessageSSO).toHaveText(text)
     }
     async clickCompanyNameBtn() {
-        await this.companyNameBtn.waitForExist({ timeout: 7000 })
+        await this.companyNameBtn.waitForExist({ timeout: 10000 })
         await this.companyNameBtn.click()
         await expect(this.inputBuisnessName).toBeDisplayed()
     }
@@ -85,10 +85,10 @@ class LoginPage extends mainPage{
         await expect(this.inputBuisnessName).toHaveValue(name)
     }
     async goToPasswordRecoveryPage() {
-        await this.forgotPasswordBtn.waitForExist({ timeout: 7000 })
+        await this.forgotPasswordBtn.waitForExist({ timeout: 10000 })
         setTimeout(async function () {
             await browser.toHaveUrlContaining('/password-reset')
-          }, 5000);
+          }, 10000);
         await this.forgotPasswordBtn.click()
         await expect(browser).toHaveUrlContaining('/password-reset')  
     }

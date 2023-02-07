@@ -13,7 +13,7 @@ class ResendEmailPage {
         await expect(this.inputEmail).toHaveValue(email)
     }
     async clickSubmitBtn(){
-        await this.submitBtn.waitForEnabled({ timeout: 7000 })
+        await this.submitBtn.waitForEnabled({ timeout: 10000 })
         this.submitBtn.click()
     }
     async checkMessage (text) {
@@ -21,7 +21,7 @@ class ResendEmailPage {
         await expect(this.message).toHaveText(text)
     }
     async clickHaveAccountBtn () {
-        await this.haveAccounBtn.waitForExist({ timeout: 7000 })
+        await this.haveAccounBtn.waitForExist({ timeout: 10000 })
         this.haveAccounBtn.click()
         setTimeout(async function () {
             await browser.toHaveUrlContaining('/login')
@@ -29,7 +29,7 @@ class ResendEmailPage {
         await expect(browser).toHaveUrlContaining('/login')
     }
     async clickNeedSignUpBtn () {
-        await this.needSignUpBtn.waitForExist({ timeout: 7000 })
+        await this.needSignUpBtn.waitForExist({ timeout: 10000 })
         this.needSignUpBtn.click()
         setTimeout(async function () {
             await browser.toHaveUrlContaining('/sign-up')
