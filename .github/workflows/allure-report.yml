@@ -6,7 +6,7 @@ on:
       - created
   push:
     branches-ignore:
-      - '!master'
+      - '!main'
 
 jobs:
   allure:
@@ -28,6 +28,7 @@ jobs:
         if: always()
         #id: allure-report
         with:
+          subfolder: test/specs
           allure_results: allure-results
           #gh_pages: gh-pages
           #allure_report: allure-report
