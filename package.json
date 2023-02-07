@@ -17,11 +17,13 @@
     },
     "scripts": {
         "wdio": "npm run wdio:chrome && npm run wdio:firefox",
-        "wdio:chrome": "wdio run wdio.chrome.conf.js --headless",
+        "wdio:chrome": "wdio run wdio.chrome.conf.js",
         "wdio:firefox": "wdio run wdio.firefox.conf.js",
         "allure:generate": "npx allure generate ./allure-results --clean",
         "allure:open": "npx allure open ./allure-report",
-        "allure:serve": "npx allure serve"
+        "allure:serve": "npx allure serve",
+        "docker:build": "docker build -t testwdio -f Dockerfile .",
+        "docker:run" : "docker run -it testwdio"
     },
     "dependencies": {
         "selenium-standalone": "^8.2.5",

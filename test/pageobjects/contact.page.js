@@ -9,7 +9,7 @@ class ContactPage extends mainPage{
         await this.loginBtn.click()
         setTimeout(async function () {
             await browser.toHaveUrlContaining('/sign-up')
-          }, 5000);
+        }, 5000);
         await expect(browser).toHaveUrlContaining('/sign-up')
     }
 }

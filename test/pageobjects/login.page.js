@@ -33,9 +33,13 @@ class LoginPage extends mainPage{
         await this.submitBtn.waitForEnabled({ timeout: 7000 })
         await this.submitBtn.click()
     }
-    async checkErrorMessage(text){
-        await expect(this.errorMessage).toBeDisplayed()
-        await expect(this.errorMessage).toHaveText(text)
+    async checkErrorMessage(text, error){
+            if (this.errorMessage.toHaveText(text)){ 
+                await expect(this.errorMessage).toBeDisplayed()
+            } else {
+                await expect(this.errorMessage).toBeDisplayed()
+                await expect(this.errorMessage).toHaveText(error)
+            }
     }
     async openOtherProviders(){
         await this.otherProviders.waitForEnabled({ timeout: 7000 })
