@@ -16,11 +16,10 @@ class PasswordRecoveryPage{
         await expect(this.loginBtn).toBeDisplayed()
     }
     async clickLoginBtn () {
-        await this.loginBtn.waitForExist({ timeout: 7000 })
         this.loginBtn.click()
         setTimeout(async function () {
             await browser.toHaveUrlContaining('/login')
-          }, 5000);
+        }, 5000);
         await expect(browser).toHaveUrlContaining('/login')
     }
     async checkBlockedResetPasswordBtn() {

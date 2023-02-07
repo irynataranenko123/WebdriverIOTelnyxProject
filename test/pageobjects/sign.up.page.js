@@ -14,7 +14,7 @@ class SignUpPage extends mainPage{
     get showPasswordBtn () {return $('[data-prefix="fas"]')}
     get havePromocodeBtn () {return $('.sc-5d3a275a-24')}
     get inputPromocode () {return $('#promo_code')}
-    get termsBtn () {return $('[href="/terms-and-conditions-of-service"]')}
+    get termsBtn () {return $('[href="https://policies.google.com/terms"]')}
     get bottomPrivacyBtn () {return $('[href="https://policies.google.com/privacy"]')}
 
     async fillWorkEmail(email) {
@@ -66,12 +66,10 @@ class SignUpPage extends mainPage{
     async clickTermsBtn() {
         await this.termsBtn.waitForExist({ timeout: 7000 })
         this.termsBtn.click()
-        await browser.switchWindow('https://telnyx.com/sign-up');
-        await browser.switchWindow('https://telnyx.com/terms-and-conditions-of-service')
         setTimeout(async function () {
-            await browser.toHaveUrlContaining('/terms-and-conditions-of-service')
+            await browser.toHaveUrlContaining('/terms')
         }, 5000);
-        await expect(browser).toHaveUrlContaining('/terms-and-conditions-of-service')
+        await expect(browser).toHaveUrlContaining('/terms')
     }
     async clickBottomPrivacyBtn() {
         await this.bottomPrivacyBtn.waitForExist({ timeout: 7000 })

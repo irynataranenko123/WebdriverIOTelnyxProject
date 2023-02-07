@@ -43,7 +43,7 @@ describe('telnyx', async function () {
     it('A17 - Checking the ability to open the field to fill the promo code', async function () {
         await signUpPage.clickHavePromocodeBtn()
     })
-    it('A18 - Checking the ability to open Terms and Conditions on the Sign Up page', async function () {
+    it('A18 - Checking the ability to open Terms of Service on the bottom of the Sign Up page', async function () {
         await signUpPage.clickTermsBtn()
     })
     it('A19 - Checking the ability to open Privacy Policy on the bottom of the Sign Up page', async function () {
