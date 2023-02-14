@@ -23,8 +23,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
+    - name: NPM ci
+      run: npm ci
+      
     - name: Run tests
       run: npm run wdio
       continue-on-error: true
