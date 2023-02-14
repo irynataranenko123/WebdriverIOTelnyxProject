@@ -13,7 +13,6 @@
         "@wdio/mocha-framework": "^8.3.0",
         "@wdio/selenium-standalone-service": "^8.3.2",
         "@wdio/spec-reporter": "^8.3.0",
-        "wdio-allure-reporter": "^0.8.3",
         "wdio-chromedriver-service": "^8.0.1",
         "wdio-docker-service": "^3.2.1"
     },
@@ -31,6 +30,7 @@
         "wdio:grid": "wdio run wdio.grid.conf.js"
     },
     "dependencies": {
+        "allure-commandline": "^2.21.0",
         "chromedriver": "^109.0.0",
         "selenium-standalone": "^8.3.0"
     }
