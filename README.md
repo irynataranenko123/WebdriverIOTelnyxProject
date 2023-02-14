@@ -53,7 +53,5 @@ When you run test Allur Report generates automaticly to a folder 'allure-reports
 - Open Allure Report: npm run allure:open
 ```
 ## GitHub Pages:
-Automatic report deployment implemented to GitHub Pages:
-```
-https://pepesspi123.github.io/WebdriverIOTelnyxProject/
-```
+Automatic report deployment implemented to GitHub Pages: https://pepesspi123.github.io/WebdriverIOTelnyxProject/
+
