@@ -26,6 +26,11 @@ exports.config = {
     // then the current working directory is where your `package.json` resides, so `wdio`
     // will be called from there.
     //
+
+    //hostname: 'localhost',
+    //port: 4444, 
+    //path: '/',
+
     specs: [
         './test/specs/**/*.js'
     ],
@@ -126,7 +131,7 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: ['chromedriver'],
-    
+    //services: ['docker'],
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks

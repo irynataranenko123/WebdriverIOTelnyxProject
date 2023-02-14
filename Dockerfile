@@ -1,6 +1,6 @@
 FROM webdriverio/selenium-standalone:latest
-WORKDIR /Project_6
-ADD . /Project_6
+WORKDIR /WebdriverIOTelnyxProject
+ADD . /WebdriverIOTelnyxProject
 
 RUN npm install 
 
