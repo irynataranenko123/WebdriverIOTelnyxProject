@@ -28,7 +28,7 @@ $ npm install
 ```
 ## Docker image:
 ```
-- To build Docker image: npm run docker:build
+- To build a Docker image: npm run docker:build
 - To run tests in Docker image: npm run docker:run
 ```
 ## Cross-environment:
@@ -37,7 +37,7 @@ To run tests in beta or dev versions of browsers:
 - docker-compose -f beta.yml up
 - docker-compose -f dev.yml up
 ```
-After it in new termil:
+After it in a new terminal:
 ```
 - npm run wdio.grid.conf.js
 ```
@@ -47,11 +47,10 @@ To finish the session:
 - docker-compose -f dev.yml down
 ```
 ## Report:
-When you run test Allur Report generates automaticly to a folder 'allure-reports'.
+When you run the test Allur Report generates automatically to a folder 'allure-reports'.
 ```
 - Generate report: npm run allure:generate
 - Open Allure Report: npm run allure:open
 ```
 ## GitHub Pages:
 Automatic report deployment implemented to GitHub Pages: https://pepesspi123.github.io/WebdriverIOTelnyxProject/
-
